@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@200;300;400;500;600&family=JetBrains+Mono:wght@200;300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-creme: #f97316;
+  --color-creme-light: #ffedd5;
+  --color-creme-dark: #c2410c;
+
+  --animate-border-pulse: border-pulse 1.8s infinite ease-in-out;
+
+  @keyframes border-pulse {
+    0%, 100% {
+      border-color: rgba(255, 80, 0, 0.35);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.7), 0 0 0px rgba(255,80,0,0);
+    }
+    50% {
+      border-color: rgba(255, 80, 0, 0.95);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.7), 0 0 18px rgba(255,80,0,0.2);
+    }
+  }
+}
+
+/* Base custom resets for high luxury layout style */
+html, body {
+  background-color: #fbfbfa;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Hide scrollbars across elements but keep scroll functionality */
+#vessel-scroll-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Fine micro aesthetic styling tweaks */
+::selection {
+  background-color: #1c1917;
+  color: #faf9f6;
+}
+
+/* Elegant radial background gradient behind canvas to add dramatic vignette */
+#vessel-canvas {
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 75%, rgba(0,0,0,0.85) 100%);
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 75%, rgba(0,0,0,0.85) 100%);
+}
+
+/* Luxury cursor trail backplate glow */
+.cursor-glow-spotlight {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 80, 0, 0.055),
+    rgba(6, 182, 212, 0.015) 40%,
+    transparent 80%
+  );
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+/* Glass reflection glint animation */
+.glass-reflection-glint {
+  position: relative;
+  overflow: hidden;
+}
+.glass-reflection-glint::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 30%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.08) 35%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.08) 65%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  transition: all 0.75s ease;
+  opacity: 0;
+}
+.glass-reflection-glint:hover::after {
+  left: 130%;
+  opacity: 1;
+}
+
