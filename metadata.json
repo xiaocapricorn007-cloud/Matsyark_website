@@ -1,6 +1,0 @@
-{
-  "name": "Vessel Engineering Specification",
-  "description": "A premium, minimalistic 3D interactive showcase of yacht and ship engineering, detailing the hull, deck, and superstructure design specifications with smooth GSAP camera animations.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
