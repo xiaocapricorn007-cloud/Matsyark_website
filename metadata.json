@@ -1,6 +1,6 @@
 {
   "name": "Vessel Engineering Specification",
-  "description": "A premium, minimalistic 3D interactive showcase of yacht and ship engineering, detailing the hull, deck, and superstructure design specifications with smooth GSAP camera animations.",
+  "description": "A high-end, luxury editorial monograph and architectural design portfolio for Matsyark Naval Architecture & Marine CFD Studio, crafted with white and orange editorial typography, technical blueprints, and full engineering monographs.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

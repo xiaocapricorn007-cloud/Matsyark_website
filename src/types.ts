@@ -6,8 +6,8 @@ export interface VesselSection {
   description: string;
   specs: { label: string; value: string; detail?: string }[];
   footerSpecs?: { label: string; value: string }[];
-  cameraPos: { x: number; y: number; z: number };
-  cameraLookAt: { x: number; y: number; z: number };
+  cameraPos?: { x: number; y: number; z: number };
+  cameraLookAt?: { x: number; y: number; z: number };
 }
 
 export const VESSEL_SECTIONS: VesselSection[] = [
@@ -21,10 +21,10 @@ export const VESSEL_SECTIONS: VesselSection[] = [
       { label: "Comprehensive Expertise", value: "Naval architecture, structural engineering, high-fidelity 3D modeling and hydrodynamic design." },
       { label: "Industry Standards", value: "Structural validation aligned with Lloyd's Register, ABS, and DNV GL regulations." },
       { label: "Advanced Simulation", value: "Advanced Navier-Stokes CFD analyses and finite element analysis (FEA)." },
-      { label: "Global Operations", value: "Collaborating with world-class shipbuilders and private clients in Monaco, Miami, and Singapore." }
+      { label: "Studio Operations", value: "Operating from Chennai, India, collaborating with shipbuilders, drydocks, and academic research teams worldwide." }
     ],
     footerSpecs: [
-      { label: "Founded", value: "2026 // Global" },
+      { label: "Location", value: "India, Chennai" },
       { label: "Core Expertise", value: "Naval Engineering" },
       { label: "Class Rules", value: "Lloyd's, ABS, DNV" }
     ],
